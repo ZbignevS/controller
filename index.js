@@ -1,10 +1,12 @@
 const config = require('config');
 const mongoose = require('mongoose');
+const express = require('express');
+// reikia segmentuoti path'us ateity
 const signUpRoute = require('./routes/signup.route');
 const loginRoute = require('./routes/login.route');
 const productRoute = require('./routes/product.route');
 const allProductsRoute = require('./routes/allProducts.route');
-const express = require('express');
+
 const app = express();
 
 //check private key
