@@ -16,7 +16,9 @@ router.post('/', auth, async (req, res) => {
   
     product = new Product({
       model: req.body.model,
-      product_id: req.body.product_id
+      product_id: req.body.product_id,
+      product_name: req.body.product_name,
+      product_price: parseInt(req.body.product_price, 10)
     });
 
     res.status(200).send('ok');
