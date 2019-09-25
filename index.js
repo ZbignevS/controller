@@ -6,6 +6,7 @@ const signUpRoute = require('./routes/signup.route');
 const loginRoute = require('./routes/login.route');
 const productRoute = require('./routes/product.route');
 const allProductsRoute = require('./routes/allProducts.route');
+const addProductRoute = require('./routes/addProduct.route');
 
 const app = express();
 
@@ -28,6 +29,7 @@ app.use('/api/signup', signUpRoute);
 app.use('/api/login', loginRoute);
 app.use('/api/product', productRoute);
 app.use('/api/all-products', allProductsRoute);
+app.use('/api/add-product', addProductRoute);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log('${port}'));
